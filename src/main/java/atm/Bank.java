@@ -40,4 +40,8 @@ public class Bank {
    public Customer findCustomer(int number) {
 	  return customers.get(number);
    }
+
+   public void setDataSource(DataSource dataSource) {
+      this.dataSource = dataSource;
+   }
 }

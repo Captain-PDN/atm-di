@@ -108,4 +108,8 @@ public class ATM {
 	public int getState() {
 		return state;
 	}
+
+	public void setBank(Bank bank) {
+		this.bank = bank;
+	}
 }

@@ -67,5 +67,9 @@ public class ATMSimulator {
 			}         
 		}
 	}
+
+	public void setAtm(ATM atm) {
+		this.atm = atm;
+	}
 }
 
