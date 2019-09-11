@@ -1,4 +1,4 @@
-package src.atm;
+package xmlatm;
 
 /**
  * A bank account has a balance that can be changed by

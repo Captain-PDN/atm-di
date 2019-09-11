@@ -1,4 +1,4 @@
-package src.atm;
+package annoatm;
 
 import java.io.IOException;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package src.atm;
+package javaatm;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -9,15 +9,15 @@ import java.util.Map;
  */
 public class Bank {
 
-   private Map<Integer,Customer> customers;
-   private DataSource dataSource;
+   private Map<Integer, javaatm.Customer> customers;
+   private javaatm.DataSource dataSource;
 
    /**
     * Constructs a bank with no customers.
     */
-   public Bank(DataSource dataSource) {
+   public Bank(javaatm.DataSource dataSource) {
       this.dataSource = dataSource;
-      customers = new HashMap<Integer,Customer>();
+      customers = new HashMap<Integer, javaatm.Customer>();
    }
 
    public void initializeCustomers() throws IOException {
@@ -27,7 +27,7 @@ public class Bank {
     * Adds a customer to the bank.
     * @param c the customer to add
     */
-   public void addCustomer(Customer c) {
+   public void addCustomer(javaatm.Customer c) {
       customers.put(c.getCustomerNumber(), c);
    }
    

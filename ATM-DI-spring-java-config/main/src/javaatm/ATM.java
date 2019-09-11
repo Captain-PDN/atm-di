@@ -1,4 +1,4 @@
-package src.atm;
+package javaatm;
 
 import java.io.IOException;
 
@@ -11,14 +11,14 @@ public class ATM {
 
 	private int state;
 	private int customerNumber;
-	private Customer currentCustomer;
-	private Account currentAccount;
-	private Bank bank;
+	private javaatm.Customer currentCustomer;
+	private javaatm.Account currentAccount;
+	private javaatm.Bank bank;
 
 	/**
      * Constructs an ATM for a bank.
 	 */
-	public ATM(Bank bank) {
+	public ATM(javaatm.Bank bank) {
 		this.bank = bank;
 		this.customerNumber = -1;
 		this.currentAccount = null;

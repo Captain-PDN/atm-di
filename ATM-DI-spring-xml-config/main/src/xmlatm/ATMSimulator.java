@@ -1,4 +1,6 @@
-package src.atm;
+package xmlatm;
+
+import javaatm.ATM;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -8,9 +10,9 @@ import java.util.Scanner;
  */
 public class ATMSimulator {
 
-	private ATM atm;
+	private javaatm.ATM atm;
 
-	public ATMSimulator(ATM atm) {
+	public ATMSimulator(javaatm.ATM atm) {
 		this.atm = atm;
 	}
 
@@ -28,14 +30,14 @@ public class ATMSimulator {
 		while (true) {
 			int state = atm.getState();
 
-			if (state == ATM.START) {
+			if (state == javaatm.ATM.START) {
 				System.out.print("Enter customer number: ");
 				int number = in.nextInt();
 				System.out.print("Enter PIN: ");
 				int pin = in.nextInt();
 				atm.validateCustomer(number, pin);
 			}
-			else if (state == ATM.TRANSACT) {
+			else if (state == javaatm.ATM.TRANSACT) {
 				System.out.println("Balance=" + atm.getBalance());
 				System.out.print("A=Deposit, B=Withdrawal, C=Transfer, D=Done, E=Exit: ");
 				String command = in.next();

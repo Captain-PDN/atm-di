@@ -1,9 +1,9 @@
-package java
+package config;
 
-import java.atm.ATM;
-import java.atm.ATMSimulator;
-import java.atm.Bank;
-import java.atm.DataSource;
+import javaatm.ATM;
+import javaatm.ATMSimulator;
+import javaatm.Bank;
+import javaatm.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -25,8 +25,6 @@ public class Config{
     }
 
     @Bean
-    public DataSource dataSource(){
-        return new DataSource(filename)
-    }
+    public DataSource dataSource(){ return new DataSource("customer.txt");}
 
 }

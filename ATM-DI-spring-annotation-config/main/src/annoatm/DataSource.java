@@ -1,4 +1,4 @@
-package src.atm;
+package annoatm;
 
 import java.io.FileReader;
 import java.io.IOException;

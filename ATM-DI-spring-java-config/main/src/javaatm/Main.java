@@ -1,7 +1,6 @@
-package src.atm;
+package javaatm;
 
-import src.Config;
-import src.atm.ATMSimulator
+import config.Config;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {

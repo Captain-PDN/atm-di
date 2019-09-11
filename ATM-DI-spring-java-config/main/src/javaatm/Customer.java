@@ -1,4 +1,4 @@
-package src.atm;
+package javaatm;
 
 /**
  * A bank customer with a checking and a savings account.
@@ -7,7 +7,7 @@ public class Customer {
 
    private int customerNumber;
    private int pin;
-   private Account account;
+   private javaatm.Account account;
 
    /**
     * Constructs a customer with a given number and PIN.
@@ -18,7 +18,7 @@ public class Customer {
    public Customer(int customerNumber, int pin, double initialBalance) {
       this.customerNumber = customerNumber;
       this.pin = pin;
-      this.account = new Account(initialBalance);
+      this.account = new javaatm.Account(initialBalance);
    }
    
    public int getCustomerNumber() {

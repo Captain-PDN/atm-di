@@ -1,4 +1,4 @@
-package src.atm;
+package annoatm;
 
 /**
  * A bank account has a balance that can be changed by

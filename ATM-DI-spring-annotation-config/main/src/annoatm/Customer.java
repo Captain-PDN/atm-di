@@ -1,4 +1,4 @@
-package src.atm;
+package annoatm;
 
 /**
  * A bank customer with a checking and a savings account.

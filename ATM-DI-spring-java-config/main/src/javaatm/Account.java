@@ -1,4 +1,4 @@
-package src.atm;
+package javaatm;
 
 /**
  * A bank account has a balance that can be changed by
