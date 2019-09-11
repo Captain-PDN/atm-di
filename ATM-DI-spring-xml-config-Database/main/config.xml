@@ -5,15 +5,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="dataSource" class="xmlDbATM.DataSource">
-        <constructor-arg value="customer.txt"/>
+        <constructor-arg value="Customers.db"/>
     </bean>
     <bean id="bank" class="xmlDbATM.Bank">
         <constructor-arg ref="dataSource"/>
     </bean>
-    <bean id="annoatm" class="xmlDbATM.ATM">
+    <bean id="atm" class="xmlDbATM.ATM">
         <constructor-arg ref="bank"/>
     </bean>
     <bean id="atmSimulator" class="xmlDbATM.ATMSimulator">
-        <constructor-arg ref="annoatm"/>
+        <constructor-arg ref="atm"/>
     </bean>
 </beans>
