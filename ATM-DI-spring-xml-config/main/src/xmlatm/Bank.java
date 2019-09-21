@@ -1,8 +1,5 @@
 package xmlatm;
 
-import javaatm.Customer;
-import javaatm.DataSource;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,15 +9,15 @@ import java.util.Map;
  */
 public class Bank {
 
-   private Map<Integer, javaatm.Customer> customers;
-   private javaatm.DataSource dataSource;
+   private Map<Integer, Customer> customers;
+   private DataSource dataSource;
 
    /**
     * Constructs a bank with no customers.
     */
-   public Bank(javaatm.DataSource dataSource) {
+   public Bank(DataSource dataSource) {
       this.dataSource = dataSource;
-      customers = new HashMap<Integer, javaatm.Customer>();
+      customers = new HashMap<Integer, Customer>();
    }
 
    public void initializeCustomers() throws IOException {
@@ -30,7 +27,7 @@ public class Bank {
     * Adds a customer to the bank.
     * @param c the customer to add
     */
-   public void addCustomer(javaatm.Customer c) {
+   public void addCustomer(Customer c) {
       customers.put(c.getCustomerNumber(), c);
    }
    

@@ -1,7 +1,5 @@
 package xmlatm;
 
-import javaatm.Customer;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -23,15 +21,15 @@ public class DataSource {
      * Reads the customer numbers and pins
      * and initializes the bank accounts.
      */
-    public Map<Integer, javaatm.Customer> readCustomers() throws IOException {
-        Map<Integer, javaatm.Customer> customers = new HashMap<Integer, javaatm.Customer>();
+    public Map<Integer, Customer> readCustomers() throws IOException {
+        Map<Integer, Customer> customers = new HashMap<Integer, Customer>();
 
         Scanner in = new Scanner(new FileReader(filename));
         while (in.hasNext()) {
             int number = in.nextInt();
             int pin = in.nextInt();
             double currentBalance = in.nextDouble();
-            javaatm.Customer c = new Customer(number, pin, currentBalance);
+            Customer c = new Customer(number, pin, currentBalance);
             customers.put(c.getCustomerNumber(), c);
         }
         in.close();

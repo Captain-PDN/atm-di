@@ -1,9 +1,5 @@
 package xmlatm;
 
-import javaatm.Account;
-import javaatm.Bank;
-import javaatm.Customer;
-
 import java.io.IOException;
 
 /**
@@ -15,14 +11,14 @@ public class ATM {
 
 	private int state;
 	private int customerNumber;
-	private javaatm.Customer currentCustomer;
-	private javaatm.Account currentAccount;
-	private javaatm.Bank bank;
+	private Customer currentCustomer;
+	private Account currentAccount;
+	private Bank bank;
 
 	/**
      * Constructs an ATM for a bank.
 	 */
-	public ATM(javaatm.Bank bank) {
+	public ATM(Bank bank) {
 		this.bank = bank;
 		this.customerNumber = -1;
 		this.currentAccount = null;

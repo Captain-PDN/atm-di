@@ -1,39 +1,29 @@
 package xmlDbATM;
 
 import JDBC.DBConnection;
-import javaatm.Customer;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 public class DataSource {
 
     private DBConnection dbConnection;
 
-    /**
-     */
-    public DataSource(String dbName) throws SQLException, ClassNotFoundException {
-        dbConnection = new DBConnection();
-        dbConnection.createConnection(dbName);
+    public DataSource(DBConnection dbConnection) {
+        this.dbConnection = dbConnection;
     }
 
     /**
      * Reads the customer numbers and pins
      * and initializes the bank accounts.
      */
-    public Map<Integer, xmlDbATM.Customer> readCustomers() throws SQLException {
+    public Map<Integer, xmlDbATM.Customer> readCustomers() {
         Map<Integer, xmlDbATM.Customer> customers = new HashMap<Integer, xmlDbATM.Customer>();
 
-        ArrayList<xmlDbATM.Customer> customersArrayList =  dbConnection.getCustomers();
+        List<Customer> customersArrayList =  dbConnection.getCustomers();
         for (xmlDbATM.Customer cus:customersArrayList) {
             customers.put(cus.getCustomerNumber(), cus);
         }
-        dbConnection.closeConnection();
 
         return customers;
     }
